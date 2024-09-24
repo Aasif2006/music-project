@@ -1,0 +1,90 @@
+/* Styles for the App */
+.App {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Flex container to hold the track cards */
+.track-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Each track card will take up 3 columns */
+.track-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.search-bar{
+  text-align: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+input{
+padding: 10px ;
+width: 500px;
+outline: none;
+border: 1px solid orangered;
+font-size: 18px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: none;
+}
+button{
+  padding: 10px;
+  border: 1px solid orangered;
+  border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+  border-left: none;
+  font-size: 18px;
+}
+.track-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .track-card {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row */
+  }
+  .search-bar{
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  input{
+  padding: 10px ;
+  width:70%;
+  }
+  button{
+    padding: 10px;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .track-card {
+    flex: 1 1 100%; /* 1 item per row */
+  }
+  .search-bar{
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  input{
+  padding: 10px ;
+  width: 60%;
+  }
+  button{
+    padding: 10px;
+  }
+}
